@@ -11,6 +11,7 @@
     "coffee-tests": "coffee -c test/*.coffee",
     "pretest": "npm run lint && npm run coffee-tests",
     "test": "nyc mocha",
+    "test-js": "mocha 'test/**/*.test.js'",
     "test-on-travis": "npm run pretest && istanbul cover _mocha --report lcovonly",
     "test-coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "upload-to-coveralls": "cat ./coverage/lcov.info | coveralls"
