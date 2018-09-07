@@ -1,0 +1,62 @@
+{
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "rules": {
+    "camelcase": 0,
+    "indent": ["error", "tab"],
+    "no-console": 0,
+    "no-param-reassign": 0,
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": {
+          "multiline": true
+        }
+      }
+    ],
+    "strict": 0,
+    "requireCurlyBraces": [ "if", "else", "for", "while", "do", "try", "catch" ],
+    "requireSpaceAfterKeywords": [
+      "do",
+      "for",
+      "if",
+      "else",
+      "switch",
+      "case",
+      "try",
+      "void",
+      "while",
+      "with",
+      "return",
+      "typeof"
+    ],
+    "requireSpacesInFunctionExpression": {
+      "beforeOpeningCurlyBrace": true
+    },
+    "disallowSpacesInFunctionExpression": {
+      "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInCallExpression": true,
+    "requireSpaceBeforeBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
+    "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-"],
+    "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
+    "disallowKeywords": [ "with" ],
+    "disallowKeywordsOnNewLine": [ "else" ],
+    "disallowSpaceAfterObjectKeys": true,
+    "validateLineBreaks": "LF",
+    "validateIndentation": "\t",
+    "disallowMixedSpacesAndTabs": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": true,
+    "requireSpacesInConditionalExpression": {
+      "afterTest": true,
+      "beforeConsequent": true,
+      "afterConsequent": true,
+      "beforeAlternate": true
+    }
+  }
+}
