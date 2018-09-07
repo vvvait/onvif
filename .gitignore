@@ -5,7 +5,6 @@ node_modules
 .idea/
 test.js
 test/*.map
-test/*.js
 cam_tests
 experiments
 docs
