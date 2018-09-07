@@ -4,8 +4,6 @@ node_js:
 before_install:
   - "npm config set spin false"
 script: npm run-script test-on-travis
-after_success:
-  - npm run-script upload-to-coveralls
 notifications:
   email: true
 sudo: false

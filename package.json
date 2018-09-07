@@ -13,8 +13,6 @@
     "test": "nyc mocha",
     "test-js": "mocha 'test/**/*.test.js'",
     "test-on-travis": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "test-coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "upload-to-coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "contributors": [
     {
