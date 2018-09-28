@@ -1,5 +1,3 @@
-var  server;
-
 const http = require('http')
 	, dgram = require('dgram')
 	, fs = require('fs')
@@ -75,14 +73,21 @@ discover.on('message', (msg, rinfo) => {
 	}
 });
 
-discover.bind(3702, () => {
-	discover.addMembership('239.255.255.250');
-});
+const connect = () => {
+	discover.bind(3702, () => {
+		discover.addMembership('239.255.255.250');
+	});
 
-server = http.createServer(listener).listen(conf.port);
-
-module.exports = {
-	server: server,
-	conf: conf
+	module.exports.server = http.createServer(listener).listen(conf.port);
 };
 
+const disconnect = () => {
+	discover.close(() => console.log('udp closed'));
+	module.exports.server.close(() => console.log('http closed'));
+};
+
+module.exports = {
+	conf,
+	connect,
+	disconnect
+};
