@@ -1,9 +1,9 @@
 logs
 *.log
 coverage
+.nyc_output
 node_modules
 .idea/
-test.js
 test/*.map
 cam_tests
 experiments
