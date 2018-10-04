@@ -12,7 +12,7 @@
     "pretest": "npm run lint && npm run coffee-tests",
     "test": "nyc mocha 'test/**/*.test.js'",
     "test-js": "mocha 'test/**/*.test.js'",
-    "test-on-travis": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "test-on-travis": "npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "contributors": [
     {
