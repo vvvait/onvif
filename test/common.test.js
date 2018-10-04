@@ -1,4 +1,4 @@
-const synthTest = !process.env.HOSTNAME;
+const synthTest = true; //!process.env.HOSTNAME;
 let serverMockup;
 
 const onvif = require('../lib/onvif')
@@ -17,6 +17,7 @@ describe('Common functions', () => {
 			port: process.env.PORT ? parseInt(process.env.PORT) : 10101
 		};
 		if (synthTest) {
+			console.log('synth test');
 			const { connect } = require('./serverMockup');
 			connect();
 			serverMockup = require('./serverMockup');
