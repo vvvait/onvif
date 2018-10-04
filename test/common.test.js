@@ -48,7 +48,7 @@ describe('Common functions', () => {
 	describe('_request', () => {
 
 		it('brokes when no arguments are passed', done => {
-			assert.throws(cam._request);
+			assert.throws(() => cam._request());
 			done();
 		});
 
