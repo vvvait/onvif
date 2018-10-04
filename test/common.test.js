@@ -434,7 +434,7 @@ describe('Common functions', () => {
 			return cam.getNodes(function(err, data) {
 				assert.strictEqual(err, null);
 				assert.ok(typeof data === 'object');
-				assert.strict.deepEqual(cam.nodes, data);
+				assert.deepStrictEqual(cam.nodes, data);
 				return done();
 			});
 		});
